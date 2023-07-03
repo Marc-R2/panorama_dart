@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 0:
         panorama = Panorama(
           animSpeed: 1.0,
-          sensorControl: SensorControl.Orientation,
+          sensorControl: SensorControl.orientation,
           onViewChanged: onViewChanged,
           onTap: (longitude, latitude, tilt) => print('onTap: $longitude, $latitude, $tilt'),
           onLongPressStart: (longitude, latitude, tilt) => print('onLongPressStart: $longitude, $latitude, $tilt'),
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 2:
         panorama = Panorama(
           animSpeed: 1.0,
-          sensorControl: SensorControl.Orientation,
+          sensorControl: SensorControl.orientation,
           onViewChanged: onViewChanged,
           croppedArea: Rect.fromLTWH(2533.0, 1265.0, 5065.0, 2533.0),
           croppedFullWidth: 10132.0,
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
       default:
         panorama = Panorama(
           animSpeed: 1.0,
-          sensorControl: SensorControl.Orientation,
+          sensorControl: SensorControl.orientation,
           onViewChanged: onViewChanged,
           child: panoImages[_panoId % panoImages.length],
           hotspots: [
